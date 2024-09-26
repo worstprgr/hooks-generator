@@ -15,3 +15,14 @@ options:
 
 Type `main.py help hooks` to display all supported hooks.
 ```
+
+### Note
+It only works on repos that where created with the `--bare` argument.
+
+### Examples
+Creates branch protection.  
+| Hook        | Repo Path | Branch to Protect |
+|-------------|-----------|-------------------|
+| pre-receive | \<path>    | main             |
+
+`python main.py pre-receive /path/to/bare/git/repo --tb main`
